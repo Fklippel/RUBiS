@@ -9,3 +9,12 @@
 user.properties
 build
 dist
+
+# Configuração local (contém caminhos absolutos da máquina)
+rubis.properties
+Client/rubis.properties
+
+# Resultados de execução do benchmark (dados sintéticos, não código)
+stat_client*.html
+container_stats.csv
+perf.html
