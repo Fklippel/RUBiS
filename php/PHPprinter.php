@@ -2,7 +2,7 @@
  
 function getDatabaseLink(&$link)
 {
-  $link = mysql_pconnect("localhost", "cecchet", "");
+  $link = mysql_pconnect("db", "rubis", "rubis");
   if (!$link)
   {
 	error_log("[".__FILE__."] Could not connect to database: " . mysql_error());
