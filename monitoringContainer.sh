@@ -1,6 +1,4 @@
 #!/bin/bash
-# Monitora CPU, memória, rede e disco dos containers web e db do RUBiS
-# Uso: ./monitor_containers.sh > container_stats.csv
 
 echo "timestamp,container,cpu_perc,mem_usage,mem_perc,net_io,block_io"
 
