@@ -18,3 +18,4 @@ Client/rubis.properties
 stat_client*.html
 container_stats.csv
 perf.html
+Client/build.xml
