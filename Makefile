@@ -2,6 +2,8 @@
 
 include config.mk
 
+.PHONY: client initDB emulator all world javadoc clean
+
 ####################
 #       Client     #
 ####################
