@@ -18,10 +18,10 @@ php_script_path = /PHP
 
 # Workload: precise which transition table to use
 workload_remote_client_nodes =
-workload_remote_client_command = java -classpath <caminho-absoluto-do-seu-projeto>/Client edu.rice.rubis.client.ClientEmulator
+workload_remote_client_command = java -classpath /Client edu.rice.rubis.client.ClientEmulator
 workload_number_of_clients_per_node = 10
 
-workload_transition_table = <caminho-absoluto-do-seu-projeto>/workload/default_transitions.txt
+workload_transition_table = /workload/default_transitions.txt
 workload_number_of_columns = 27
 workload_number_of_rows = 29
 workload_maximum_number_of_transitions = 1000
@@ -41,8 +41,8 @@ database_server = localhost
 database_number_of_users = 20
 
 # Region & Category definition files
-database_regions_file = <caminho-absoluto-do-seu-projeto>/setup/db/ebay_regions.txt
-database_categories_file = <caminho-absoluto-do-seu-projeto>/setup/db/ebay_simple_categories.txt
+database_regions_file = /setup/db/ebay_regions.txt
+database_categories_file = /setup/db/ebay_simple_categories.txt
 
 # Items policy
 database_number_of_old_items = 500
