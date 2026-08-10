@@ -14,13 +14,19 @@ This README file is documenting how I achieved this 3 points.
 To keep the repo concise it is a good practice to remove all dependencies unrelated to the objective of the study. Thus, removing java/servlets and EJB implementation was necessary. All of these commands were used to achieve a cleaner repository: 
 
 - the servelets version of the aplication:
+```
 git rm -r servlets/
+```
 
 - load presets specific to the Servlets/EJB implementations:
+```
 git rm -r "bench/Servlets.properties" "bench/EJB.properties"
 git rm bench/jboss*.sh bench/jonas*.sh bench/ejb_generate_graphs.sh
+```
 
 - removes specific configuration of Apache Tomcat:
+```
 git rm -r setup/scripts/
+```  
 
 Also, some references to Servlets/EJB in the Makefile and generate_cpu_avg.sh were removed. 
