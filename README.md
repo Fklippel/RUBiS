@@ -35,9 +35,9 @@ Also, some references to Servlets/EJB in the Makefile and generate_cpu_avg.sh we
 
 With all the redundunt stuff out of the way the Dockerfile and a simple docker-compose with 2 containers, the app container and a mysql:15.7, were implemented to initialize the RUBiS aplication. 
 
-To access the app locally via `http://localhost:8080/PHP/index.html` 
+Access the app locally via `http://localhost:8080/PHP/index.html` 
 
-# Sourcing the missing Client code
+## Sourcing the missing Client code
 
 For the benchmarking itself, the original repository's Client/ folder only contained a Makefile the structure to compile it, but not the actual source code. Without the .java files, there was no ClientEmulator to generate load. The solution was to pull this code from a different (https://github.com/uillianluiz/RUBiS.git)[repository], since this kind of benchmark setup is common, it was straightforward to find a fork with a complete, working Client/ implementation.
 
