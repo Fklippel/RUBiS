@@ -30,3 +30,36 @@ git rm -r setup/scripts/
 ```  
 
 Also, some references to Servlets/EJB in the Makefile and generate_cpu_avg.sh were removed. 
+
+## Docker 
+
+With all the redundunt stuff out of the way the Dockerfile and a simple docker-compose with 2 containers, the app container and a mysql:15.7, were implemented to initialize the RUBiS aplication. 
+
+To access the app locally via `http://localhost:8080/PHP/index.html` 
+
+# Sourcing the missing Client code
+
+For the benchmarking itself, the original repository's Client/ folder only contained a Makefile the structure to compile it, but not the actual source code. Without the .java files, there was no ClientEmulator to generate load. The solution was to pull this code from a different (https://github.com/uillianluiz/RUBiS.git)[repository], since this kind of benchmark setup is common, it was straightforward to find a fork with a complete, working Client/ implementation.
+
+## Database prep
+
+Creating the database structure:
+```
+docker exec -i rubis-db-1 mysql -uroot -prootpass rubis < setup/db/rubis.sql
+docker exec -i rubis-db-1 mysql -uroot -prootpass rubis < setup/db/categories.sql
+docker exec -i rubis-db-1 mysql -uroot -prootpass rubis < setup/db/regions.sql
+```
+Populating the database with synthetic data:
+```
+make initDB PARAM=all
+``` 
+
+
+
+
+
+
+
+
+
+
